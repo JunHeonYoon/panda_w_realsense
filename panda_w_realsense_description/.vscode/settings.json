@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/yoonjunheon/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/home/yoonjunheon/catkin_ws/src/suhan_robot_model_tools"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/yoonjunheon/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/home/yoonjunheon/catkin_ws/src/suhan_robot_model_tools"
+    ]
+}

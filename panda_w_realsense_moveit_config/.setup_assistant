@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: panda_w_realsense_description
+    relative_path: urdf/panda.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/panda.srdf
+  CONFIG:
+    author_name: JunHeon Yoon
+    author_email: yoonjh98@snu.ac.kr
+    generated_timestamp: 1701662542

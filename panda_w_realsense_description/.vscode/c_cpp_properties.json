@@ -1,0 +1,45 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/yoonjunheon/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/opt/openrobots/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/moveit/moveit_planners/chomp/chomp_motion_planner/include/**",
+        "/home/yoonjunheon/catkin_ws/src/franka_ros/franka_control/include/**",
+        "/home/yoonjunheon/catkin_ws/src/franka_ros/franka_example_controllers/include/**",
+        "/home/yoonjunheon/catkin_ws/src/franka_ros/franka_gazebo/include/**",
+        "/home/yoonjunheon/catkin_ws/src/franka_ros/franka_gripper/include/**",
+        "/home/yoonjunheon/catkin_ws/src/franka_ros/franka_hw/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/geometric_shapes/include/**",
+        "/home/yoonjunheon/catkin_ws/src/gl_depth_sim/gl_depth_sim/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/moveit/moveit_planners/chomp/chomp_interface/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/moveit_resources/prbt_ikfast_manipulator_plugin/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/moveit/moveit_ros/benchmarks/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/moveit/moveit_plugins/moveit_ros_control_interface/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/moveit/moveit_ros/move_group/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/moveit/moveit_ros/occupancy_map_monitor/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/moveit/moveit_ros/robot_interaction/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/moveit/moveit_ros/moveit_servo/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/moveit/moveit_setup_assistant/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/moveit/moveit_plugins/moveit_simple_controller_manager/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/moveit_visual_tools/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/moveit/moveit_planners/pilz_industrial_motion_planner/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/moveit/moveit_planners/pilz_industrial_motion_planner_testutils/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/rviz_visual_tools/include/**",
+        "/home/yoonjunheon/catkin_ws/src/moveit_pkg/srdfdom/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

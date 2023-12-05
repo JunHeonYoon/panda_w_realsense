@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <name>panda_w_realsense_description</name>
+  <version>0.0.1</version>
+  <description>Franka Panda with realsense visualize</description>
+
+  <maintainer email="yoonjh98@snu.ac.kr">Yoon JunHeon</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+  <!-- <run_depend>realsense2_description</run_depend> -->
+  <run_depend>urdf</run_depend>
+  <run_depend>xacro</run_depend>
+
+  <export>
+  </export>
+</package>

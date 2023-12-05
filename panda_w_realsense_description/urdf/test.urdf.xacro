@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="panda_w_realsense">
+  <joint name="panda_finger_joint1" type="prismatic">
+    <origin xyz="0. 0. 0.0584" rpy="0. 0. 0."/>
+    <parent link="panda_hand"/>
+    <child link="panda_leftfinger"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="0." upper="0.04" effort="0." velocity="0."/>
+  </joint>
+  <joint name="panda_finger_joint2" type="prismatic">
+    <origin xyz="0. 0. 0.0584" rpy="0. 0. 0."/>
+    <parent link="panda_hand"/>
+    <child link="panda_rightfinger"/>
+    <axis xyz="0. -1. 0."/>
+    <limit lower="0." upper="0.04" effort="0." velocity="0."/>
+  </joint>
+  <joint name="panda_hand_joint" type="fixed">
+    <origin xyz="0. 0. 0." rpy="0. 0. -0.7853982"/>
+    <parent link="panda_link8"/>
+    <child link="panda_hand"/>
+    <limit lower="0." upper="0." effort="0." velocity="0."/>
+  </joint>
+  <joint name="panda_joint1" type="revolute">
+    <origin xyz="0. -0. 0.3329999" rpy="0. 0. 0."/>
+    <parent link="panda_link0"/>
+    <child link="panda_link1"/>
+    <axis xyz="0. 0. 1."/>
+    <limit lower="-2.8973001" upper="2.8973001" effort="0." velocity="0."/>
+  </joint>
+  <joint name="panda_joint2" type="revolute">
+    <origin xyz="-0. -0. -0." rpy="-1.5707966 -0. 0. "/>
+    <parent link="panda_link1"/>
+    <child link="panda_link2"/>
+    <axis xyz="0. 0. 1."/>
+    <limit lower="-1.7628" upper="1.7628" effort="0." velocity="0."/>
+  </joint>
+  <joint name="panda_joint3" type="revolute">
+    <origin xyz="0. -0.316 0. " rpy="1.5707964 0. 0. "/>
+    <parent link="panda_link2"/>
+    <child link="panda_link3"/>
+    <axis xyz="0. 0. 1."/>
+    <limit lower="-2.8973001" upper="2.8973001" effort="0." velocity="0."/>
+  </joint>
+  <joint name="panda_joint4" type="revolute">
+    <origin xyz="0.0825 0. 0. " rpy="1.5707964 0. 0. "/>
+    <parent link="panda_link3"/>
+    <child link="panda_link4"/>
+    <axis xyz="0. 0. 1."/>
+    <limit lower="-3.0718" upper="-0.0698" effort="0." velocity="0."/>
+  </joint>
+  <joint name="panda_joint5" type="revolute">
+    <origin xyz="-0.0824999 0.3839999 0. " rpy="-1.5707964 0. 0. "/>
+    <parent link="panda_link4"/>
+    <child link="panda_link5"/>
+    <axis xyz="0. 0. 1."/>
+    <limit lower="-2.8973001" upper="2.8973001" effort="0." velocity="0."/>
+  </joint>
+  <joint name="panda_joint6" type="revolute">
+    <origin xyz="0. 0. 0." rpy="1.5707964 0. 0. "/>
+    <parent link="panda_link5"/>
+    <child link="panda_link6"/>
+    <axis xyz="0. 0. 1."/>
+    <limit lower="-0.0175" upper="3.7525" effort="0." velocity="0."/>
+  </joint>
+  <joint name="panda_joint7" type="revolute">
+    <origin xyz="0.088 0.0000002 -0. " rpy="1.5707959 -0. 0. "/>
+    <parent link="panda_link6"/>
+    <child link="panda_link7"/>
+    <axis xyz="0. 0. 1."/>
+    <limit lower="-2.8973001" upper="2.8973001" effort="0." velocity="0."/>
+  </joint>
+  <joint name="panda_joint8" type="fixed">
+    <origin xyz="0. 0. 0.107" rpy="0. 0. 0."/>
+    <parent link="panda_link7"/>
+    <child link="panda_link8"/>
+    <limit lower="0." upper="0." effort="0." velocity="0."/>
+  </joint>
+  <joint name="rootJoint" type="fixed">
+    <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+    <parent link="World"/>
+    <child link="panda_link0"/>
+    <limit lower="0." upper="0." effort="0." velocity="0."/>
+  </joint>
+  <link name="World"/>
+  <link name="panda_link0">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="2.8142028"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. -1.5707963"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID3_000.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. -1.5707963"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID3_000frA.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. -1.5707963"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID3_000jEI.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. -1.5707963"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID3_000m4u.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. -1.5707963"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID3_000pR3.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. -0. 0." rpy="-0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/logo_decals_polySurface8.obj" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0.5336492 0.0001978 0.0007459" rpy="-0. 0. 1.5707964"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/cables_connected_extrudedSurface1.obj" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0.5336492 0.0001978 0.0007459" rpy="-0. 0. 1.5707964"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/cables_connected_extrudedSurface2.obj" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="-0.0682205 -0.0850672 0.0482225" rpy="-0. 0. 2.986038"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/cables_connected_pCylinder1.obj" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="-0.0259303 -0.0776735 0.0336309" rpy="0. -0. -0.1628491"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/cables_connected_pCylinder2.obj" scale="0.0056822 0.0036471 0.0056822"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. -1.5707963"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID3_000frA.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="panda_link1">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="2.3599997"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. -0.192" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID3_000.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. -0.192" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID3_000.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="panda_link2">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="2.3795187"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID3_000.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID3_000.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="panda_link3">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="2.6498823"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. -0.121" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID17_001.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.121" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID17_001frA.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. -0.121" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID17_001.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="panda_link4">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="2.6948018"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 1.5705347 0. "/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID25_000.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 1.5707964 0. "/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID25_000frA.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 1.5707964 0. "/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID25_000frA.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="panda_link5">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="2.9812818"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. -0.259" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID11_000.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.259" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID11_000frA.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. -0.259" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID11_000.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="panda_link6">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="1.1285807"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. -0.015" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID389_001.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.015" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID389_001frA.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.015" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID389_001jEI.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.015" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID389_001m4u.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.015" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID389_001pR3.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.015" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID389_001snf.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.015" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID389_001wdn.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.015" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID389_001z0P.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.015" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID389_0012M1.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. -0.015" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID389_001frA.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="panda_link7">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.4052913"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0.052" rpy="0. 0. -0.7853983"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID1683_001.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0.052" rpy="0. 0. -0.7853983"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID1683_001frA.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0.052" rpy="0. 0. -0.7853983"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID1683_001jEI.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0.052" rpy="0. 0. -0.7853983"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID1683_001.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0. 0. 0.052" rpy="0. 0. -0.7853983"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID1683_001frA.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="panda_link8">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.1"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+  </link>
+  <link name="panda_hand">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.5583305"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/panda_hand_ID234_001.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/panda_hand_ID234_001frA.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/panda_hand_ID234_001jEI.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/panda_hand_ID234_001m4u.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0.0000002"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/realsense_ID4_000.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0.0000002"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/realsense_ID4_000frA.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0.0000002"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/realsense_ID4_000jEI.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0.0000002"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/realsense_ID4_000m4u.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/panda_hand_ID234_001frA.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/panda_hand_ID234_001m4u.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0.0000002"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/realsense_ID4_000.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0.0000002"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/realsense_ID4_000m4u.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="panda_leftfinger">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0140552"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID27.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID27fa3.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID27SVM.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID27.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID27SVM.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="panda_rightfinger">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0140552"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 3.1415927"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID27.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 3.1415927"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID27fa3.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 3.1415927"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID27SVM.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 3.1415927"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID27.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 3.1415927"/>
+      <geometry>
+        <mesh filename="package://panda_w_realsense_description/meshes/geometry_ID27SVM.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+</robot>
