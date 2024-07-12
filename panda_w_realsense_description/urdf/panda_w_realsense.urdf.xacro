@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
+
+  <xacro:include filename="$(find franka_description)/robots/common/franka_robot.xacro"/>
+
+  <xacro:arg name="arm_id" default="panda" />
+
+  <xacro:franka_robot arm_id="$(arg arm_id)"
+                      joint_limits="${xacro.load_yaml('$(find franka_description)/robots/panda/joint_limits.yaml')}">
+  </xacro:franka_robot>
+
+  <xacro:arg name="realsense_model"               default="d435"/>
+  <xacro:arg name="realsense_topic"               default="realsense" />
+  <xacro:arg name="realsense_prefix"              default="camera" />
+  <xacro:arg name="realsense_parent"              default="panda_hand" />
+  <xacro:arg name="realsense_xyz"                 default="0.0377 0.0047 0.0490" />
+  <xacro:arg name="realsense_rpy"                 default="-1.3828847 -1.5581197 -1.8116638" />
+  <xacro:property name="realsense_model"          value="$(arg realsense_model)"/>
+
+  <xacro:include filename="$(find panda_w_realsense_description)/urdf/intel_realsense.urdf.xacro"/>
+
+  <!-- Intel Realsense Primary and Secondary -->
+  <xacro:if value="${realsense_model == 'd435'}">
+    <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
+  </xacro:if>
+  <xacro:if value="${realsense_model == 'd435i'}">
+    <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro" />
+  </xacro:if>
+  <xacro:if value="${realsense_model == 'd415'}">
+    <xacro:include filename="$(find realsense2_description)/urdf/_d415.urdf.xacro" />
+  </xacro:if>
+  <xacro:if value="${realsense_model == 'd455'}">
+    <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
+  </xacro:if>
+
+  <xacro:realsense_sensor rs_model="$(arg realsense_model)"
+                          prefix="$(arg realsense_prefix)"
+                          parent="$(arg realsense_parent)"
+                          topic="$(arg realsense_topic)"
+                          include="0">
+    <origin xyz="$(arg realsense_xyz)" rpy="$(arg realsense_rpy)"/>
+  </xacro:realsense_sensor>
+
+</robot>
